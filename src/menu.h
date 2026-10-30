@@ -3,5 +3,6 @@
 
 void opciones();
 void banner();
+void pausa();
 
 #endif

@@ -1,19 +1,14 @@
 //local libs
 #include "menu.h"
-
+#include "account.h"
 //c++ libs
 #include <iostream>
 
 using namespace std;
 
 int main() {
-    int saldo;
-    int saldo = 500;
-
-
-
-
-
+    //var defs
+    double saldo = 500;
 
     //inicio banner
     banner();
@@ -24,17 +19,23 @@ int main() {
     switch (choice)
     {
     case 1:
-        system("cls");
-        //consultar
+        system("clear");
+        checkSaldo(saldo); //mirar el saldo
+        pausa();
+        break;
     case 2:
-        system("cls");
-        //ingresar
+        system("clear");
+        ingresarSaldo(saldo); //ingresar saldo
+        pausa();
+        break;
     case 3:
-        system("cls");
+        system("clear");
+        retirarDinero(saldo);
+        pausa();
+        break;
     case 4:
-        system("cls");
-    default:
-        cout << "Wrong input";
+        system("clear");
+        system("exit");
         break;
     }
 
